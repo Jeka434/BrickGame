@@ -1,0 +1,107 @@
+html {
+    min-height: 100vh;
+    height: 100%;
+}
+
+body {
+    background-color: #d6d7ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#game-name {
+    visibility: hidden;
+}
+
+#game-list {
+    visibility: visible;
+}
+
+#field {
+    display: flex;
+    gap: 20px;
+    visibility: hidden
+}
+
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--game-board-gap);
+    background: var(--game-board-background);
+    padding: var(--game-board-gap);
+    width: calc(
+        (var(--tile-size) + var(--game-board-gap)) * var(--game-board-width) -
+            var(--game-board-gap)
+    );
+}
+
+#tetris-next {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--game-board-gap);
+    background: var(--game-board-background);
+    padding: var(--game-board-gap);
+    width: calc(
+        (var(--tile-size) + var(--game-board-gap)) * var(--next-row-size) -
+            var(--game-board-gap)
+    );
+}
+
+#game-info {
+    background-color: rgb(184, 193, 255);
+    padding: 5px;
+    border: 2px solid;
+}
+
+.tile {
+    width: var(--tile-size);
+    height: var(--tile-size);
+    background: var(--tile-color);
+    background-color: rgb(184, 193, 255);
+}
+
+.active {
+    background: var(--tile-active-color);
+}
+
+.dashboard-text {
+    font-size: 2rem;
+}
+
+.div-ul {
+    position: relative;
+    top: -250px;
+}
+
+.project-name {
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 50px;
+    font-size: 80px;
+}
+
+.button-ul {
+    list-style-type: none;
+    top: 0;
+}
+
+.button {
+    color: rgb(0, 33, 33);
+    background-color: rgb(0, 170, 255);
+    font-weight: 700;
+    text-align: center;
+    padding: .5em 2em;
+    border: 1px solid;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 100px;
+    border-radius: 5px;
+    font-size: 40px;
+}
